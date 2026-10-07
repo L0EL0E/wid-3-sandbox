@@ -1,8 +1,13 @@
-export default function App() {
+import {useState} from "react";
 
-function handleClick(){
-  console.log('Ich wurde geklickt');
+export default function App() {
+  const [counter, setCounter] = useState(0); //Hook
+
+  function handleClick(){
+    console.log('Ich wurde geklickt');
 }
+
+//let zähler = 0;
 
   return (
     <div className="App">
@@ -14,10 +19,19 @@ function handleClick(){
         id='meinButton2' 
         onClick={() => {console.log('Ich wurde auch geklickt!')}}> 
         Klick mich auch
-      </button>*/}
+      </button>
       <input onChange={(e) => {console.log(e.target.value)}} 
         type='text'>
-      </input>
+      </input>*/}
+      <button
+        onClick={() => {
+          setCounter(counter + 1);
+          console.log(counter);
+        }}
+        >
+          Like
+        </button>
+        <p>{counter}</p>
     </div>
   );
 }
