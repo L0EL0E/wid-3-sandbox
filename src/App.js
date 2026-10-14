@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 export default function App() {
-  const [counter, setCounter] = useState(0); //Hook
+  const [counter, setCounter] = useState(0); //Hook mit const [var ("State-Variable"), setVar ("setState Funktion")]=useState(0 oder "" oder ...("Default-Wert"))
 
   function handleClick(){
     console.log('Ich wurde geklickt');
